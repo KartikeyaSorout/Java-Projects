@@ -1,0 +1,17 @@
+public class PrintNameAge {
+
+    public static void main(String[] args) {
+
+        // Store the name in a String variable
+        String name = "Kartikeya Sorout";
+
+        // Store the age
+        int age = 20;
+
+        // Calculate the length of the name
+        int length = name.length();
+
+        // Print the name, age, and name length in one line
+        System.out.println("My name is: " + name + ", my age is: " + age + ", and the length of my name is: " + length);
+    }
+}
