@@ -1,0 +1,33 @@
+public class DivisibilityCheck {
+
+    public static void main(String[] args) {
+        // First set of numbers to check
+        int m = 20;
+        int n = 5;
+
+        // Check if the divisor 'n' is zero to avoid an error
+        if (n == 0) {
+            System.out.println("Cannot divide by zero.");
+        } else if (m % n == 0) {
+            // Use the modulo operator (%) to check for a remainder
+            // If the remainder is 0, 'm' is divisible by 'n'
+            System.out.println(m + " is divisible by " + n);
+        } else {
+            // If there is any remainder, it is not divisible
+            System.out.println(m + " is not divisible by " + n);
+        }
+        
+        // Second set of numbers to check
+        int m2 = 17;
+        int n2 = 3;
+
+        // Perform the same check for the second set
+        if (n2 == 0) {
+            System.out.println("Cannot divide by zero.");
+        } else if (m2 % n2 == 0) {
+            System.out.println(m2 + " is divisible by " + n2);
+        } else {
+            System.out.println(m2 + " is not divisible by " + n2);
+        }
+    }
+}
