@@ -1,0 +1,19 @@
+public class CalculateSquare {
+
+    public static void main(String[] args) {
+
+        // Define the integer value
+        int number = 8;
+
+        // Calculate the square
+        int square = number * number;
+
+        // Print the result
+        System.out.println("The square of " + number + " is: " + square);
+
+        // Example with another number
+        int number2 = -5;
+        int square2 = number2 * number2;
+        System.out.println("The square of " + number2 + " is: " + square2);
+    }
+}
