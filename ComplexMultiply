@@ -1,0 +1,28 @@
+// Class to represent a Complex Number
+class ComplexMulti {
+    private double real;
+    private double imaginary;
+
+    //constructor
+    public ComplexMulti(double r, double i) {
+        real = r;
+        imaginary = i;
+    }
+public ComplexMulti multiply(ComplexMulti other) {
+        double realPart = this.real * other.real - this.imaginary * other.imaginary;
+        double imaginaryPart = this.real * other.imaginary + this.imaginary * other.real;
+        return new ComplexMulti(realPart, imaginaryPart);
+    }
+
+    public void display() {
+        System.out.println("This is ComplexMulti class");
+    }
+
+    public static void main(String[] args) {
+        ComplexMulti c1 = new ComplexMulti(2.0, 3.0);
+        ComplexMulti c2 = new ComplexMulti(4.0, 5.0);
+        ComplexMulti c3 = c1.multiply(c2);
+        System.out.println("Result: " + c3.real + " + " + c3.imaginary + "i");
+        c1.display();
+    }
+}
