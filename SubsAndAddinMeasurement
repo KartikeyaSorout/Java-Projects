@@ -1,0 +1,46 @@
+class Measurement {
+    int feet;
+    int inches;
+
+    Measurement(int f, int i) {
+        feet = f;
+        inches = i;
+        normalize();
+    }
+
+    private void normalize() {
+        if (inches >= 12) {
+            feet += inches / 12;
+            inches = inches % 12;
+        }
+        if (inches < 0) {
+            feet -= (Math.abs(inches) / 12) + 1;
+            inches = 12 - (Math.abs(inches) % 12);
+        }
+    }
+
+    Measurement add(Measurement m) {
+        Measurement result = new Measurement(feet + m.feet, inches + m.inches);
+        return result;
+    }
+
+    Measurement subtract(Measurement m) {
+        Measurement result = new Measurement(feet - m.feet, inches - m.inches);
+        return result;
+    }
+
+    void display() {
+        System.out.println(feet + " feet " + inches + " inches");
+    }
+
+    public static void main(String[] args) {
+        Measurement m1 = new Measurement(5, 8);
+        Measurement m2 = new Measurement(3, 10);
+
+        Measurement sum = m1.add(m2);
+        Measurement diff = m1.subtract(m2);
+
+        sum.display();
+        diff.display();
+    }
+}
