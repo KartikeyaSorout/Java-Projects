@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Student {
+    String name;
+    int rollNo;
+
+    Student(String name, int rollNo) {
+        this.name = name;
+        this.rollNo = rollNo;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Student> students = new ArrayList<>();
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Enter name of student " + i + ": ");
+            String name = sc.nextLine();
+
+            System.out.print("Enter roll no of student " + i + ": ");
+            int rollNo = sc.nextInt();
+            sc.nextLine(); // clear buffer
+
+            students.add(new Student(name, rollNo));
+        }
+
+        System.out.println("\n--- Student List ---");
+        for (Student s : students) {
+            System.out.println("Name: " + s.name + ", Roll No: " + s.rollNo);
+        }
+    }
+}
